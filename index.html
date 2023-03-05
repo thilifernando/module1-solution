@@ -1,10 +1,32 @@
-<html>
-    <head>
-        <title>
-            Hello Cousers
-        </title>
-    </head>
-    <body>
-        Hello Cousers Student thilani 1st assignment! 
-    </body>
+<!doctype html>
+
+<html lang="en" ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+<body>
+   <div class="container" ng-controller="LunchCheckController">
+     <h1>Lunch Checker</h1>
+         <div>
+             <input type="text"
+             placeholder="list comma-separated items they usually eat for lunch"
+             ng-model="items">
+         </div>
+      <br><br>
+
+         <div>
+             <button ng-click="checkItems()">Check If Too Much</button>
+         </div>
+         <br><br>
+         
+         <div>
+           {{message}}
+         </div>
+   </div>
+
+</body>
 </html>
